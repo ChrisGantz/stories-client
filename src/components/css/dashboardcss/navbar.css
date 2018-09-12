@@ -1,0 +1,30 @@
+body * {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  height: 60px;
+  position: fixed;
+  background-color: grey;
+  width: 100%;
+}
+nav .imgCircle {
+  border-radius: 50%;
+  border: 1px black solid;
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+nav ul {
+  display: inline-block;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav li::after {
+  content: "|";
+  margin-left: 5px;
+}
