@@ -7,6 +7,8 @@ import Dashboard from "./dashboard";
 import LandingPage from "./landing-page";
 import SignUpPage from "./sign-up-page";
 import LoginPage from "./login-page";
+import PostForm from "./dashboard-components/create-post-form";
+import AllPostList from "./dashboard-components/all-posts";
 
 export class App extends React.Component {
   componentDidUpdate(prevProps) {
@@ -26,7 +28,7 @@ export class App extends React.Component {
   startPeriodicRefresh() {
     this.refreshInterval = setInterval(
       () => this.props.dispatch(refreshAuthToken()),
-      10 * 60 * 1000 // 10 min
+      20 * 60 * 1000 // 20 min
     );
   }
 
@@ -45,6 +47,8 @@ export class App extends React.Component {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={SignUpPage} />
+        <Route exact path="/posts" component={PostForm} />
+        <Route exact path="/posts/all" component={AllPostList} />
       </div>
     );
   }

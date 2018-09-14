@@ -20,10 +20,8 @@ export class LoginForm extends React.Component {
         </div>
       );
     }
-    console.log(this.props);
     return (
       <div className="container">
-        <Topbar />
         <form
           className="login-form"
           onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}

@@ -21,7 +21,6 @@ export class SignUp extends React.Component {
   render() {
     return (
       <div className="container">
-        <Topbar />
         <form
           className="login-form"
           role="form"

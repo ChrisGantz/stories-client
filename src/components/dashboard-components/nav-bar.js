@@ -16,8 +16,12 @@ export default function NavBar(props) {
           alt="cat image"
         />
         <ul>
-          <li>Home</li>
-          <li>All Post's</li>
+          <li>
+            <Link to="/Dashboard">Home</Link>
+          </li>
+          <li>
+            <Link to="/posts/all">All Post's</Link>
+          </li>
           <li>
             <LogOut />
           </li>

@@ -5,13 +5,18 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { loadAuthToken } from "./local-storage";
 import authReducer from "./reducers/auth";
 import protectedDataReducer from "./reducers/protected-data";
+import postDataReducer from "./reducers/posts";
+import allPostDataReducer from "./reducers/all-posts";
 import { setAuthToken, refreshAuthToken } from "./actions/auth";
 
 const store = createStore(
   combineReducers({
     form: formReducer,
     auth: authReducer,
-    protectedData: protectedDataReducer
+    postData: postDataReducer,
+    allPostData: allPostDataReducer
+
+    // protectedData: protectedDataReducer
   }),
   // what does this do??
   composeWithDevTools(applyMiddleware(thunk))
