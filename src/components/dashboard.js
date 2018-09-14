@@ -27,7 +27,7 @@ export class Dashboard extends React.Component {
 
 const mapStateToProps = state => {
   const { currentUser } = state.auth;
-  console.log("inmaptstate", state);
+  console.log("inmaptstate Dashboard", state);
   return {
     username: state.auth.currentUser.username,
     email: `${currentUser.email}`

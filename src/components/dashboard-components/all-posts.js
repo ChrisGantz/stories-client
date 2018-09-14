@@ -3,18 +3,26 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import NavBar from "./nav-bar";
+import { likesData } from "../../actions/posts";
 
 export function AllPostList(props) {
+  console.log("func props allpost", props);
+  const like = id => {
+    console.log("in like");
+    props.dispatch(likesData(id));
+  };
+
   const posts = props.postlist.map(item => (
     <li className="post-item" key={item.id}>
       <div>{item.post}</div>
       <div>
-        <button>upvote arrow</button>
-        <span>5</span>
-        <button>downvote arrow</button>
+        <button onClick={() => like(item.id)}>^</button>
+        <span>{item.likes}</span>
+        <button>v</button>
       </div>
     </li>
   ));
+  console.log(props.postlist);
   return (
     <div>
       <NavBar />
@@ -27,7 +35,6 @@ export function AllPostList(props) {
 //   postlist: []
 // };
 const mapStateToProps = (state, props) => {
-  console.log(state);
   return {
     postlist: state.allPostData.allData
   };

@@ -1,3 +1,5 @@
+// UNEEDED JUST EXAMPLE TO CHECK IF AUTH WORKING same in reducer
+
 import { API_BASE_URL } from "../config";
 import { normalizeResponseErrors } from "./utils";
 

@@ -12,7 +12,6 @@ export class LogOut extends React.Component {
   render() {
     // Only render the log out button if we are logged in
     let logOutButton;
-    console.log(this.props.loggedIn);
     if (this.props.loggedIn) {
       logOutButton = <button onClick={() => this.logOut()}>Log out</button>;
     }

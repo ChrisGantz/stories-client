@@ -7,6 +7,7 @@ import authReducer from "./reducers/auth";
 import protectedDataReducer from "./reducers/protected-data";
 import postDataReducer from "./reducers/posts";
 import allPostDataReducer from "./reducers/all-posts";
+import likesDataReducer from "./reducers/likes";
 import { setAuthToken, refreshAuthToken } from "./actions/auth";
 
 const store = createStore(
