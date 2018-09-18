@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "../config";
 import { normalizeResponseErrors } from "./utils";
+import { stringify } from "querystring";
 // GET ONLY USER DATA********************************************************
 export const FETCH_POST_DATA_SUCCESS = "FETCH_POST_DATA_SUCCESS";
 export const fetchPostDataSuccess = data => ({
@@ -25,15 +26,27 @@ export const fetchAllPostDataError = error => ({
 });
 
 // PUT TO LIKES DATA IN POST***************************************************
-export const FETCH_LIKES_DATA_SUCCESS = "FETCH_LIKES_DATA_SUCCESS";
-export const fetchLikesDataSuccess = updatedPost => ({
-  type: FETCH_LIKES_DATA_SUCCESS,
+export const UPDATE_LIKES_DATA_SUCCESS = "UPDATE_LIKES_DATA_SUCCESS";
+export const updateLikesDataSuccess = updatedPost => ({
+  type: UPDATE_LIKES_DATA_SUCCESS,
   updatedPost
 });
 
-export const FETCH_LIKES_DATA_ERROR = "FETCH_LIKES_DATA_ERROR";
-export const fetchLikesDataError = error => ({
-  type: FETCH_LIKES_DATA_ERROR,
+export const UPDATE_LIKES_DATA_ERROR = "UPDATE_LIKES_DATA_ERROR";
+export const updateLikesDataError = error => ({
+  type: UPDATE_LIKES_DATA_ERROR,
+  error
+});
+
+// PUT FOR COMMENTS
+export const UPDATE_COMMENTS_DATA = "UPDATE_COMMENTS_DATA";
+export const updateCommentsData = updateComments => ({
+  type: UPDATE_COMMENTS_DATA,
+  updateComments
+});
+export const UPDATE_COMMENTS_DATA_ERROR = "UPDATE_COMMENTS_DATA_ERROR";
+export const updateCommentsDataError = error => ({
+  type: UPDATE_COMMENTS_DATA_ERROR,
   error
 });
 
@@ -106,9 +119,52 @@ export const likesData = id => (dispatch, getState) => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      dispatch(fetchLikesDataSuccess(data));
+      dispatch(updateLikesDataSuccess(data));
     })
     .catch(err => {
-      dispatch(fetchLikesDataError(err));
+      dispatch(updateLikesDataError(err));
+    });
+};
+// Put to change likes in state*****************
+export const dislikesData = id => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/posts/dislikes/${id}`, {
+    method: "PUT",
+    headers: {
+      "content-type": "application/json",
+      // Provide our auth token as credentials
+      Authorization: `Bearer ${authToken}`
+    }
+  })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      dispatch(updateLikesDataSuccess(data));
+    })
+    .catch(err => {
+      dispatch(updateLikesDataError(err));
+    });
+};
+// Put to change comment in state*****************
+export const commentsData = (id, comments) => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/posts/comments/${id}`, {
+    method: "PUT",
+    headers: {
+      "content-type": "application/json",
+      // Provide our auth token as credentials
+      Authorization: `Bearer ${authToken}`
+    },
+    body: JSON.stringify({ comments })
+  })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      dispatch(updateCommentsData(data));
+    })
+    .catch(err => {
+      dispatch(updateCommentsDataError(err));
     });
 };

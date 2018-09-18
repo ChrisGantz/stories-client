@@ -2,7 +2,8 @@
 import {
   FETCH_ALL_POST_DATA_SUCCESS,
   FETCH_ALL_POST_DATA_ERROR,
-  FETCH_LIKES_DATA_SUCCESS
+  UPDATE_LIKES_DATA_SUCCESS,
+  UPDATE_COMMENTS_DATA
 } from "../actions/posts";
 // dont forget to change allData in key and value below
 const initialState = {
@@ -20,17 +21,26 @@ export default function reducer(state = initialState, action) {
     return Object.assign({}, state, {
       error: action.error
     });
-  } else if (action.type === FETCH_LIKES_DATA_SUCCESS) {
+  } else if (action.type === UPDATE_LIKES_DATA_SUCCESS) {
+    console.log("THIS IS THE ACTION", action);
     return Object.assign({}, state, {
       allData: state.allData.map(post => {
-        console.log(post.id, action.updatedPost.id);
         if (post.id === action.updatedPost.id) {
-          console.log(action.updatedPost);
+          return action.updatedPost;
+        }
+        return post;
+      })
+    });
+  } else if (action.type === UPDATE_COMMENTS_DATA) {
+    return Object.assign({}, state, {
+      allData: state.allData.map(post => {
+        if (post.id === action.updatedPost.id) {
           return action.updatedPost;
         }
         return post;
       })
     });
   }
+
   return state;
 }

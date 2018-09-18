@@ -1,32 +1,44 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
 import NavBar from "./nav-bar";
-import { likesData } from "../../actions/posts";
+import { likesData, dislikesData } from "../../actions/posts";
 
 export function AllPostList(props) {
-  console.log("func props allpost", props);
   const like = id => {
     console.log("in like");
     props.dispatch(likesData(id));
   };
+  const dislike = id => {
+    console.log("in like");
+    props.dispatch(dislikesData(id));
+  };
 
   const posts = props.postlist.map(item => (
     <li className="post-item" key={item.id}>
-      <div>{item.post}</div>
-      <div>
-        <button onClick={() => like(item.id)}>^</button>
+      <div className="vote-container">
+        <button
+          className="like-button fa fa-thumbs-up"
+          onClick={() => like(item.id)}
+        />
         <span>{item.likes}</span>
-        <button>v</button>
+        <button
+          className="dislike-button fa fa-thumbs-down"
+          onClick={() => dislike(item.id)}
+        />
       </div>
+      <div className="just-post">{item.post}</div>
+      <button className="comment-button">
+        <Link className="link" to="/comments">
+          >Comments
+        </Link>
+      </button>
     </li>
   ));
-  console.log(props.postlist);
   return (
     <div>
       <NavBar />
-      {posts}
+      <div className="my-post-list">{posts}</div>
     </div>
   );
 }

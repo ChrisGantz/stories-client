@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./css/topbar.css";
+import { connect } from "react-redux";
 
-export default function Topbar(props) {
+export function Topbar(props) {
   return (
     <header>
-      <Link to="/" className="link-stories">
+      <Link to="/" className="link">
         <h1>Write Stories</h1>
       </Link>
     </header>
   );
 }
+
+export default connect()(Topbar);

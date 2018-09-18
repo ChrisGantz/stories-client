@@ -8,7 +8,7 @@ export function AboutPage(props) {
   return (
     <div className="about">
       <TopBar />
-      <div className="about-info">
+      <div className="info">
         <h2>What you can do here?</h2>
         <p className="about-paragraph">
           Prism cornhole tousled affogato quinoa heirloom plaid ugh bespoke

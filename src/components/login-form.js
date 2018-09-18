@@ -23,40 +23,48 @@ export class LoginForm extends React.Component {
     return (
       <div className="container">
         <form
-          className="login-form"
+          className="sign-up-form"
           onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
         >
-          {error}
-          <legend>Login</legend>
-          <label htmlFor="username">Username: </label>
-          <Field
-            component={Input}
-            type="text"
-            name="username"
-            id="username"
-            validate={[required, nonEmpty]}
-          />
-          <label htmlFor="password">Password: </label>
-          <Field
-            component={Input}
-            type="password"
-            name="password"
-            id="password"
-            validate={[required, nonEmpty]}
-          />
-          <button
-            className="login-page-button"
-            disabled={this.props.pristine || this.props.submitting}
-          >
-            Log in
-          </button>
-          <div className="forgot-pass">
-            <Link to="/forgot">Forgot Password?</Link>
-          </div>
-          <div>
-            <p>need to sign up?</p>
-            <Link to="/register">Sign Up</Link>
-          </div>
+          <fieldset>
+            {error}
+            <legend>Login</legend>
+            <label htmlFor="username">Username: </label>
+            <Field
+              component={Input}
+              type="text"
+              name="username"
+              id="username"
+              validate={[required, nonEmpty]}
+            />
+            <label htmlFor="password">Password: </label>
+            <Field
+              component={Input}
+              type="password"
+              name="password"
+              id="password"
+              validate={[required, nonEmpty]}
+            />
+            <button
+              className="sign-up-login-button"
+              disabled={this.props.pristine || this.props.submitting}
+            >
+              Log in
+            </button>
+            <div className="forgot-pass">
+              <Link className="link-login" to="/forgot">
+                Forgot Password?
+              </Link>
+            </div>
+            <div>
+              <p className="need-sign-up-login">
+                Need to sign up?{" "}
+                <Link className="link-login" to="/register">
+                  Sign Up
+                </Link>
+              </p>
+            </div>
+          </fieldset>
         </form>
       </div>
     );

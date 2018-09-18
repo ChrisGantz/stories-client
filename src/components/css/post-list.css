@@ -1,0 +1,60 @@
+.post-item {
+  list-style: none;
+  margin-bottom: 15px;
+  background-color: rgb(113, 145, 182);
+  border: 0.5px solid lavender;
+  /* position: relative; */
+  border-radius: 8px;
+}
+
+.my-post-list {
+  margin: 100px 0 100px 0;
+}
+
+.just-post {
+  border: 1px solid black;
+  min-height: 100px;
+  margin: 10px;
+}
+
+.comment-button {
+  color: black;
+  background-color: rgb(113, 145, 182);
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: 0;
+  position: relative;
+  transition: background-color 0.25s ease-in;
+}
+
+.create-post-button {
+  padding-left: 10px;
+}
+.post-button {
+  margin-top: 140px;
+  margin-bottom: -80px;
+}
+
+.vote-container {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.like-button {
+  border: none;
+  background-color: rgb(113, 145, 182);
+}
+.like-button:hover {
+  cursor: pointer;
+}
+.dislike-button {
+  border: none;
+  background-color: rgb(113, 145, 182);
+}
+.dislike-button:hover {
+  cursor: pointer;
+}
+.like-counter {
+  padding: 0 5px;
+}

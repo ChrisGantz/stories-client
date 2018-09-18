@@ -10,8 +10,10 @@ export class SideBar extends React.Component {
   render() {
     return (
       <div className="post-button">
-        <button>
-          <Link to="/posts">CREATE POST</Link>
+        <button className="create-post-button">
+          <Link className="link" to="/posts">
+            CREATE POST
+          </Link>
         </button>
       </div>
     );

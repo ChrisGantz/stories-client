@@ -9,6 +9,7 @@ import SignUpPage from "./sign-up-page";
 import LoginPage from "./login-page";
 import PostForm from "./dashboard-components/create-post-form";
 import AllPostList from "./dashboard-components/all-posts";
+import Comments from "./dashboard-components/comments";
 
 export class App extends React.Component {
   componentDidUpdate(prevProps) {
@@ -49,6 +50,7 @@ export class App extends React.Component {
         <Route exact path="/register" component={SignUpPage} />
         <Route exact path="/posts" component={PostForm} />
         <Route exact path="/posts/all" component={AllPostList} />
+        <Route exact path="/comments" component={Comments} />
       </div>
     );
   }
