@@ -15,6 +15,7 @@
   border: 1px solid black;
   min-height: 100px;
   margin: 10px;
+  padding: 10px;
 }
 
 .comment-button {
@@ -44,6 +45,7 @@
 .like-button {
   border: none;
   background-color: rgb(113, 145, 182);
+  font-size: 16px;
 }
 .like-button:hover {
   cursor: pointer;
@@ -51,6 +53,8 @@
 .dislike-button {
   border: none;
   background-color: rgb(113, 145, 182);
+  margin-bottom: -2px;
+  font-size: 16px;
 }
 .dislike-button:hover {
   cursor: pointer;

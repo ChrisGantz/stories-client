@@ -4,19 +4,21 @@ import { likesData } from "../../actions/posts";
 import { Link } from "react-router-dom";
 
 export function PostList(props) {
-  // props.dispatch(likesData());
-
   const posts = props.postlist.map(item => (
     <li className="post-item" key={item.id}>
       <div className="vote-container">
-        <button className="like-button fa fa-thumbs-up" />
+        <button className="like-button">
+          <span className="fa fa-thumbs-up" />
+        </button>
         <span className="like-counter">{item.likes}</span>
-        <button className="dislike-button fa fa-thumbs-down" />
+        <button className="dislike-button">
+          <span className="fa fa-thumbs-down" />
+        </button>
       </div>
       <div className="just-post">{item.post}</div>
       <button className="comment-button">
         <Link className="link" to="/comments">
-          >Comments
+          <i className="far fa-comment-alt" /> Comments
         </Link>
       </button>
     </li>
