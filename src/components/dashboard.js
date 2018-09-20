@@ -14,7 +14,6 @@ export class Dashboard extends React.Component {
     this.props.dispatch(allUsersData());
   }
   render() {
-    console.log("inside Dashboard", this.props);
     return (
       <div className="dashboard">
         <NavBar />
@@ -27,7 +26,6 @@ export class Dashboard extends React.Component {
 
 const mapStateToProps = state => {
   const { currentUser } = state.auth;
-  console.log("inmaptstate Dashboard", state);
   return {
     username: state.auth.currentUser.username,
     email: `${currentUser.email}`

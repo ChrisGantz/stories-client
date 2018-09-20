@@ -1,0 +1,41 @@
+.comment-input {
+  display: block;
+  width: 100%;
+  min-height: 110px;
+  padding: 10px;
+}
+.comment-form {
+  margin: 10px;
+}
+.comment-form > legend {
+  font-family: "Vollkorn SC", serif;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.add-comment-button {
+  margin-top: 10px;
+  border: none;
+  background-color: rgb(180, 191, 201);
+  padding: 5px;
+  border-radius: 3px;
+}
+.add-comment-button:hover {
+  cursor: pointer;
+}
+
+.style-links {
+  margin: 20px 2px;
+  border-radius: 3px;
+  padding: 4px 5px;
+  background-color: rgb(180, 191, 201);
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  .style-links {
+    max-width: 130px;
+  }
+}

@@ -29,8 +29,8 @@ fieldset {
 }
 
 label {
-  font-family: "Patua One", cursive;
-  /* font-family: "Vollkorn SC", serif; */
+  /* font-family: "Patua One", cursive; */
+  font-family: "Vollkorn SC", serif;
 }
 
 .need-sign-up-login {

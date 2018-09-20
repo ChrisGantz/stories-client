@@ -16,21 +16,20 @@ export function PostList(props) {
         </button>
       </div>
       <div className="just-post">{item.post}</div>
-      <button className="comment-button">
+      {/* <button className="comment-button">
         <Link className="link" to="/comments">
           <i className="far fa-comment-alt" /> Comments
         </Link>
-      </button>
+      </button> */}
     </li>
   ));
   return <div className="my-post-list">{posts}</div>;
 }
 
-PostList.defaultProps = {
-  postlist: []
-};
+// PostList.defaultProps = {
+//   postlist: []
+// };
 const mapStateToProps = (state, props) => {
-  console.log("in postlist maptostate", state);
   return {
     postlist: state.postData.data
   };

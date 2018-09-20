@@ -50,7 +50,7 @@ export class App extends React.Component {
         <Route exact path="/register" component={SignUpPage} />
         <Route exact path="/posts" component={PostForm} />
         <Route exact path="/posts/all" component={AllPostList} />
-        <Route exact path="/comments" component={Comments} />
+        <Route exact path="/comments/:id" component={Comments} />
       </div>
     );
   }

@@ -18,7 +18,7 @@ export default function NavBar(props) {
         />
         <ul>
           <li>
-            <Link className="link" to="/Dashboard">
+            <Link className="link" to="/dashboard">
               Home
             </Link>
           </li>

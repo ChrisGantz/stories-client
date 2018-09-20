@@ -15,32 +15,34 @@ export class PostForm extends React.Component {
 
   render() {
     if (this.state.formSubmitted) {
-      return <Redirect to="/Dashboard" />;
+      return <Redirect to="/dashboard" />;
     }
     return (
       <div>
-        <h2>Post</h2>
         <form
-          className="post-form"
+          className="comment-form"
           onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
         >
+          <legend>Post</legend>
           <label htmlFor="user-post">Have a great story? Post it here!</label>
           <Field
+            className="comment-input"
             component="textarea"
             type="text"
             name="post"
             validate={[required, nonEmpty]}
           />
           <button
+            className="add-comment-button"
             type="submit"
             disabled={this.props.pristine || this.props.submitting}
           >
             POST
           </button>
+          <Link className="link style-links" to="/dashboard">
+            Cancel
+          </Link>
         </form>
-        <span className="go-back">
-          <Link to="/Dashboard">Back</Link>
-        </span>
       </div>
     );
   }

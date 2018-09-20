@@ -1,16 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import requiresLogin from "../requires-login";
 import NavBar from "./nav-bar";
-import { likesData, dislikesData, allUsersData } from "../../actions/posts";
+import {
+  likesData,
+  dislikesData,
+  allUsersData,
+  userData
+} from "../../actions/posts";
 
 export class AllPostList extends React.Component {
   componentDidMount() {
     // this.props.dispatch(fetchProtectedData());
-    // this.props.dispatch(userData());
+    this.props.dispatch(userData());
     this.props.dispatch(allUsersData());
   }
   render() {
+    // if (!this.props.loggedIn) {
+    //   return <Redirect to="/" />;
+    // }
     const like = id => {
       console.log("in like");
       this.props.dispatch(likesData(id));
@@ -19,9 +28,8 @@ export class AllPostList extends React.Component {
       console.log("in dislike");
       this.props.dispatch(dislikesData(id));
     };
-    // <span className="fa fa-thumbs-up" />
-    const posts = this.props.postlist.map(item => (
-      <li className="post-item" key={item.id}>
+    const posts = this.props.postlist.map((item, index) => (
+      <li className="post-item" key={item.id} data-index={index}>
         <div className="vote-container">
           <button className="like-button" onClick={() => like(item.id)}>
             <span className="fa fa-thumbs-up" />
@@ -33,7 +41,7 @@ export class AllPostList extends React.Component {
         </div>
         <div className="just-post">{item.post}</div>
         <button className="comment-button">
-          <Link className="link" to="/comments">
+          <Link className="link" to={`/comments/${item.id}`}>
             <i className="far fa-comment-alt" /> Comments
           </Link>
         </button>
@@ -42,7 +50,9 @@ export class AllPostList extends React.Component {
     return (
       <div>
         <NavBar />
-        <div className="my-post-list">{posts}</div>
+        <div className="my-post-list">
+          <ul>{posts}</ul>
+        </div>
       </div>
     );
   }
@@ -53,8 +63,10 @@ export class AllPostList extends React.Component {
 // };
 const mapStateToProps = (state, props) => {
   return {
-    postlist: state.allPostData.allData
+    postlist: state.allPostData.allData,
+    // state.auth.authToken fakes being logged in
+    loggedIn: state.auth.currentUser !== null || state.auth.authToken
   };
 };
 
-export default connect(mapStateToProps)(AllPostList);
+export default requiresLogin()(connect(mapStateToProps)(AllPostList));

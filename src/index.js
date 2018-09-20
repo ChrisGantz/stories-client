@@ -13,6 +13,7 @@ import "../src/components/css/aboutpg.css";
 import "../src/components/css/sign-up.css";
 import "../src/components/css/nav-bar.css";
 import "../src/components/css/post-list.css";
+import "../src/components/css/comment-form.css";
 
 ReactDOM.render(
   <Provider store={store}>

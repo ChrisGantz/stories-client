@@ -58,7 +58,7 @@ export class LoginForm extends React.Component {
             </div>
             <div>
               <p className="need-sign-up-login">
-                Need to sign up?{" "}
+                Don't have an account?{" "}
                 <Link className="link-login" to="/register">
                   Sign Up
                 </Link>

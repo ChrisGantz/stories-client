@@ -10,6 +10,14 @@ body {
   text-decoration: none;
   color: black;
 }
+.link:hover {
+  cursor: pointer;
+}
+.link-login {
+  text-decoration: none;
+  color: aquamarine;
+  font-weight: 600;
+}
 h1 {
   text-align: center;
   font-family: "Vollkorn SC", serif;

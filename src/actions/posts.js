@@ -148,25 +148,25 @@ export const updateCommentsDataError = error => ({
   error
 });
 
-//GET POST
-export const onePostData = id => (dispatch, getState) => {
-  const authToken = getState().auth.authToken;
-  return fetch(`${API_BASE_URL}/posts/all/${id}`, {
-    method: "GET",
-    headers: {
-      // Provide our auth token as credentials
-      Authorization: `Bearer ${authToken}`
-    }
-  })
-    .then(res => normalizeResponseErrors(res))
-    .then(res => res.json())
-    .then(data => dispatch(fetchAllPostDataSuccess(data)))
-    .catch(err => {
-      dispatch(fetchAllPostDataError(err));
-    });
-};
+//GET POST using this way would need new action and reducer
+// export const onePostData = id => (dispatch, getState) => {
+//   const authToken = getState().auth.authToken;
+//   return fetch(`${API_BASE_URL}/posts/all/${id}`, {
+//     method: "GET",
+//     headers: {
+//       // Provide our auth token as credentials
+//       Authorization: `Bearer ${authToken}`
+//     }
+//   })
+//     .then(res => normalizeResponseErrors(res))
+//     .then(res => res.json())
+//     .then(data => dispatch(fetchAllPostDataSuccess(data)))
+//     .catch(err => {
+//       dispatch(fetchAllPostDataError(err));
+//     });
+// };
 
-export const commentsData = (id, comments) => (dispatch, getState) => {
+export const addCommentsData = (id, comments) => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/posts/comments/${id}`, {
     method: "PUT",
