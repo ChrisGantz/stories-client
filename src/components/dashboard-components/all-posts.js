@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import requiresLogin from "../requires-login";
 import NavBar from "./nav-bar";
 import {
@@ -21,11 +21,11 @@ export class AllPostList extends React.Component {
     //   return <Redirect to="/" />;
     // }
     const like = id => {
-      console.log("in like");
+      // console.log("in like");
       this.props.dispatch(likesData(id));
     };
     const dislike = id => {
-      console.log("in dislike");
+      // console.log("in dislike");
       this.props.dispatch(dislikesData(id));
     };
     const posts = this.props.postlist.map((item, index) => (

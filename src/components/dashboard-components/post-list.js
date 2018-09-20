@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { likesData } from "../../actions/posts";
-import { Link } from "react-router-dom";
 
 export function PostList(props) {
   const posts = props.postlist.map(item => (

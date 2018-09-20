@@ -1,6 +1,6 @@
 import { API_BASE_URL } from "../config";
 import { normalizeResponseErrors } from "./utils";
-import { stringify } from "querystring";
+// import { stringify } from "querystring";
 // GET ONLY USER DATA********************************************************
 export const FETCH_POST_DATA_SUCCESS = "FETCH_POST_DATA_SUCCESS";
 export const fetchPostDataSuccess = data => ({
@@ -41,7 +41,7 @@ export const updateLikesDataError = error => ({
 // Post to db**********************************************
 export const userPost = post => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  console.log("at user post", post);
+  // console.log("at user post", post);
   return fetch(`${API_BASE_URL}/posts`, {
     method: "POST",
     headers: {
@@ -106,7 +106,7 @@ export const likesData = id => (dispatch, getState) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       dispatch(updateLikesDataSuccess(data));
     })
     .catch(err => {
@@ -127,7 +127,7 @@ export const dislikesData = id => (dispatch, getState) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       dispatch(updateLikesDataSuccess(data));
     })
     .catch(err => {

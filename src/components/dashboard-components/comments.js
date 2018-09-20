@@ -19,13 +19,13 @@ export class Comments extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const like = id => {
-      console.log("in like");
+      // console.log("in like");
       this.props.dispatch(likesData(id));
     };
     const dislike = id => {
-      console.log("in dislike");
+      // console.log("in dislike");
       this.props.dispatch(dislikesData(id));
     };
     const onePost = this.props.posts.find(post => {
@@ -34,7 +34,7 @@ export class Comments extends React.Component {
     if (!onePost) {
       return <div>Loading...</div>;
     }
-    console.log("in one post", onePost);
+    // console.log("in one post", onePost);
     const comments = onePost.comments.reverse().map((comment, index) => {
       return (
         <li className="post-item" key={index}>
@@ -76,4 +76,4 @@ const mapStateToProps = (state, props) => {
   };
 };
 
-export default connect(mapStateToProps)(Comments);
+export default requiresLogin()(connect(mapStateToProps)(Comments));

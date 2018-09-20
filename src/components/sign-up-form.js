@@ -3,7 +3,7 @@ import { Field, reduxForm, focus } from "redux-form";
 import { registerUser } from "../actions/users";
 import { login } from "../actions/auth";
 import Input from "./input";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   required,
   nonEmpty,
@@ -12,7 +12,6 @@ import {
   isTrimmed,
   email
 } from "../validation";
-import Topbar from "./top-bar";
 const passwordLength = length({ min: 10, max: 72 });
 const matchesPassword = matches("password");
 

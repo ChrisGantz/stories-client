@@ -1,7 +1,5 @@
 import React from "react";
-
-import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // import "../css/dashboardcss/navbar.css";
 import LogOut from "../logout";
@@ -35,9 +33,3 @@ export default function NavBar(props) {
     </div>
   );
 }
-
-// const mapStateToProps = state => ({
-//   loggedIn: state.auth.currentUser !== null
-// });
-
-// export default connect(mapStateToProps)(NavBar);

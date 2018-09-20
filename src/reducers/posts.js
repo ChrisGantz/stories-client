@@ -1,8 +1,6 @@
 import {
   FETCH_POST_DATA_SUCCESS,
-  FETCH_POST_DATA_ERROR,
-  FETCH_LIKES_DATA_SUCCESS,
-  FETCH_LIKES_DATA_ERROR
+  FETCH_POST_DATA_ERROR
 } from "../actions/posts";
 
 const initialState = {

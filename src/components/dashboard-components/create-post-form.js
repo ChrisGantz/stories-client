@@ -3,6 +3,8 @@ import { Field, reduxForm, focus } from "redux-form";
 import { userPost } from "../../actions/posts";
 import { required, nonEmpty } from "../../validation";
 import { Link, Redirect } from "react-router-dom";
+import requiresLogin from "../requires-login";
+import { connect } from "react-redux";
 
 export class PostForm extends React.Component {
   state = { formSubmitted: false };
@@ -48,8 +50,10 @@ export class PostForm extends React.Component {
   }
 }
 
-export default reduxForm({
+const createPostForm = reduxForm({
   form: "posting",
   onSubmitFail: (errors, dispatch) =>
     dispatch(focus("posting", Object.keys(errors)[0]))
 })(PostForm);
+
+export default requiresLogin()(connect()(createPostForm));

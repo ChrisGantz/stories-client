@@ -1,8 +1,6 @@
 import React from "react";
 import { Field, reduxForm, focus } from "redux-form";
-import { userPost } from "../../actions/posts";
 import { required, nonEmpty } from "../../validation";
-import { Link, Redirect } from "react-router-dom";
 import { addCommentsData } from "../../actions/posts";
 
 export class CommentForm extends React.Component {

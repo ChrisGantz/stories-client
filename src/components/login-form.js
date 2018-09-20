@@ -3,8 +3,7 @@ import { Field, reduxForm, focus } from "redux-form";
 import Input from "./input";
 import { login } from "../actions/auth";
 import { required, nonEmpty } from "../validation";
-import Topbar from "./top-bar";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export class LoginForm extends React.Component {
   onSubmit(values) {
@@ -29,16 +28,16 @@ export class LoginForm extends React.Component {
           <fieldset>
             {error}
             <legend>Login</legend>
-            <label htmlFor="username">Username: </label>
             <Field
+              label="Username: "
               component={Input}
               type="text"
               name="username"
               id="username"
               validate={[required, nonEmpty]}
             />
-            <label htmlFor="password">Password: </label>
             <Field
+              label="Password: "
               component={Input}
               type="password"
               name="password"
