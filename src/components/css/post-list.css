@@ -11,6 +11,9 @@
 .my-post-list {
   margin: 100px 0 100px 0;
 }
+.my-post-list ul {
+  padding: 0;
+}
 
 .just-post {
   border: 1px solid black;

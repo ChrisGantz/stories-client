@@ -51,7 +51,7 @@ export class AllPostList extends React.Component {
       <div>
         <NavBar />
         <div className="my-post-list">
-          <ul>{posts}</ul>
+          <ul role="posts">{posts}</ul>
         </div>
       </div>
     );

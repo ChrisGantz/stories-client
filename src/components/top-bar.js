@@ -6,7 +6,7 @@ export function Topbar(props) {
   return (
     <header>
       <Link to="/" className="link">
-        <h1>Write Stories</h1>
+        <h1>Writing Concepts</h1>
       </Link>
     </header>
   );

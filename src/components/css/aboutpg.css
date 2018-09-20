@@ -14,7 +14,7 @@ body {
   cursor: pointer;
 }
 .link-login {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: aquamarine;
   font-weight: 600;
 }
@@ -43,6 +43,7 @@ h2 {
   display: inline-block;
 }
 .link-sign-up {
+  /* text-decoration: none; */
   color: rgb(24, 107, 107);
 }
 .about-login-link {

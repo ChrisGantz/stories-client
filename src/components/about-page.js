@@ -11,15 +11,14 @@ export function AboutPage(props) {
       <div className="info">
         <h2>What you can do here?</h2>
         <p className="about-paragraph">
-          Prism cornhole tousled affogato quinoa heirloom plaid ugh bespoke
-          raclette, vaporware beard stumptown normcore typewriter. Mustache
-          ennui air plant pok pok disrupt cronut stumptown forage. Pour-over
-          food truck hella tumeric brooklyn tofu lo-fi cold-pressed raclette
-          humblebrag celiac hashtag cliche offal everyday carry Prism cornhole
-          tousled affogato quinoa heirloom plaid ugh bespoke raclette, vaporware
-          beard stumptown normcore typewriter. Mustache ennui air plant pok pok
-          disrupt cronut stumptown forage. Pour-over food truck hella tumeric
-          brook
+          Welcome to writing concepts! After signing up and logging you will be
+          at the homepage where you can add posts about any interesting ideas
+          for the start of a book, movie anything! The idea should be short,
+          concise and to the point. For example, "Aliens have arived to your
+          home and gave you two choices stay on earth or go with them and they
+          will show you everything the universe has to offer..." You will be
+          able to upvote and downvote a idea as well as comment to others and
+          expand on that idea.
         </p>
       </div>
     </div>
