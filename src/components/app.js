@@ -43,7 +43,7 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <main className="app">
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/login" component={LoginPage} />
@@ -51,7 +51,7 @@ export class App extends React.Component {
         <Route exact path="/posts" component={PostForm} />
         <Route exact path="/posts/all" component={AllPostList} />
         <Route exact path="/comments/:id" component={Comments} />
-      </div>
+      </main>
     );
   }
 }

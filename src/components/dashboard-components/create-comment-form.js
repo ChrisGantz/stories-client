@@ -1,5 +1,5 @@
 import React from "react";
-import { Field, reduxForm, focus } from "redux-form";
+import { Field, reduxForm, focus, reset } from "redux-form";
 import { required, nonEmpty } from "../../validation";
 import { addCommentsData } from "../../actions/posts";
 
@@ -10,13 +10,16 @@ export class CommentForm extends React.Component {
     const postId = this.props.id;
     // console.log(postId);
 
-    this.props.dispatch(addCommentsData(postId, comment));
+    this.props
+      .dispatch(addCommentsData(postId, comment))
+      .then(() => this.props.dispatch(reset("comments")));
   }
 
   render() {
     return (
       <form
         className="comment-form"
+        id="form-id"
         onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
       >
         <label>Comment: </label>
