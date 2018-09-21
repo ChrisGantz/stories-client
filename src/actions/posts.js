@@ -180,7 +180,7 @@ export const addCommentsData = (id, comments) => (dispatch, getState) => {
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       dispatch(updateCommentsData(data));
     })
     .catch(err => {

@@ -6,9 +6,9 @@ import { addCommentsData } from "../../actions/posts";
 export class CommentForm extends React.Component {
   onSubmit(values) {
     const comment = values.post;
-    console.log(comment);
+    // console.log(comment);
     const postId = this.props.id;
-    console.log(postId);
+    // console.log(postId);
 
     this.props.dispatch(addCommentsData(postId, comment));
   }

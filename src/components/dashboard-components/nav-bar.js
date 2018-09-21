@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ideaBulb from "./ideabulb.jpg";
 
 // import "../css/dashboardcss/navbar.css";
 import LogOut from "../logout";
@@ -7,10 +8,10 @@ import LogOut from "../logout";
 export default function NavBar(props) {
   return (
     <div className="nav-bar">
-      <nav role="navigation">
+      <nav>
         <img
           className="bookImg"
-          src="http://mariafresa.net/newimages/bobook-clipart-symbol-10.jpg"
+          src={ideaBulb}
           width="350"
           alt="Book Silhouette Free Download Clip Art Free Clip Art On "
         />

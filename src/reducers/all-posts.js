@@ -31,7 +31,7 @@ export default function reducer(state = initialState, action) {
       })
     });
   } else if (action.type === UPDATE_COMMENTS_DATA) {
-    console.log("THIS IS THE ACTION", action);
+    // console.log("THIS IS THE ACTION", action);
     return Object.assign({}, state, {
       allData: state.allData.map(post => {
         if (post.id === action.updateComments.id) {

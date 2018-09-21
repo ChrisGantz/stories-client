@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, withRouter } from "react-router-dom";
 
-import { refreshAuthToken, clearAuth } from "../actions/auth";
+import { refreshAuthToken } from "../actions/auth";
 import Dashboard from "./dashboard";
 import LandingPage from "./landing-page";
 import SignUpPage from "./sign-up-page";
