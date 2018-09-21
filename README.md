@@ -15,6 +15,7 @@ Writing Concepts is a mobile-first full stack project. The idea behind the proje
 
 ## WireFrame
 Writing concepts wireframe done in draw.io
+
 <img alt="Landing Page" src="https://github.com/ChrisGantz/stories-client/blob/master/assets/WireFrameWritingConcepts.jpg" width="350">
 
 
@@ -28,3 +29,11 @@ Writing concepts wireframe done in draw.io
 * Passport
 * MongoDB
 * Heroku
+
+### Future Features
+- Add sortibility [trending, popular, new
+- Replies to comments
+- search
+- show how many users looking at post
+- More restrictions on what a user can type how much they can type
+- remove posts that have been repeatedly posted
