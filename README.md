@@ -13,8 +13,9 @@
 ## Summary
 Writing Concepts is a mobile-first full stack project. The idea behind the project is that there are millions of people with ideas for a story but are not writers so they never do anything with it well! in this app you can post any idea you have and people can build upon it or maybe even if a writer stumbles on an idea they like they could write it into a book. Here you can create an account, login, post a your idea, upvote a idea!, and comment on other's.
 
-
-
+## WireFrame
+Writing concepts wireframe done in draw.io
+<img alt="Landing Page" src="https://github.com/ChrisGantz/stories-client/blob/master/assets/WireFrameWritingConcepts.jpg" width="350">
 
 
 ## Technology
