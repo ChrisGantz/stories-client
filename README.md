@@ -22,6 +22,8 @@ Writing concepts wireframe done in draw.io
 ## Technology
 
 * HTML5
+* React
+* Redux
 * CSS
 * JavaScript
 * Node.js
