@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 export function Topbar(props) {
   return (
-    <header>
+    <header role="banner">
       <Link to="/" className="link">
         <h1>Writing Concepts</h1>
       </Link>

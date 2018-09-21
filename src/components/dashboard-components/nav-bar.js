@@ -7,7 +7,7 @@ import LogOut from "../logout";
 export default function NavBar(props) {
   return (
     <div className="nav-bar">
-      <nav>
+      <nav role="navigation">
         <img
           className="bookImg"
           src="http://mariafresa.net/newimages/bobook-clipart-symbol-10.jpg"

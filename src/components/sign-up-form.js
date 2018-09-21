@@ -29,7 +29,7 @@ export class SignUp extends React.Component {
       <div className="container">
         <form
           className="sign-up-form"
-          role="form"
+          role="search"
           onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
         >
           <fieldset>
