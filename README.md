@@ -37,3 +37,4 @@ Writing concepts wireframe done in draw.io
 - show how many users looking at post
 - More restrictions on what a user can type how much they can type
 - remove posts that have been repeatedly posted
+- Ability to recover password with email
