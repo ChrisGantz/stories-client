@@ -33,10 +33,12 @@ Writing concepts wireframe done in draw.io
 * Heroku
 
 ### Future Features
-- Add sortibility [trending, popular, new
+- Add sortibility [trending, popular, new]
 - Replies to comments
 - search
 - show how many users looking at post
 - More restrictions on what a user can type how much they can type
 - remove posts that have been repeatedly posted
 - Ability to recover password with email
+
+link to server-side code https://github.com/ChrisGantz/stories-server
