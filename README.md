@@ -1,6 +1,9 @@
 # Writing Concepts
 [Writing concept app here] https://writing-concepts.herokuapp.com/
 
+username: demoUser
+password: password123
+
 ## Screenshots 📸
 | <img alt="Landing Page" src="https://github.com/ChrisGantz/stories-client/blob/master/assets/landingpage.jpg" width="350"> | <img alt="Login Page" src="https://github.com/ChrisGantz/stories-client/blob/master/assets/login.jpg" width="350"> | <img alt="Registration Page" src="https://github.com/ChrisGantz/stories-client/blob/master/assets/sign-up.jpg" width="350"> |
 |:---:|:---:|:---:|
