@@ -1,7 +1,9 @@
 .post-item {
   list-style: none;
   margin-bottom: 15px;
-  background-color: rgb(113, 145, 182);
+  background-color: rgb(178, 179, 176);
+  /* background-image: url('../../yellow-paper.jpg'); */
+  background-repeat: no-repeat;
   border: 0.5px solid lavender;
   /* position: relative; */
   border-radius: 8px;
@@ -9,8 +11,16 @@
 }
 
 .my-post-list {
-  margin: 100px 0 100px 0;
+  width: 90%;
+  margin: 100px auto;
 }
+
+@media only screen and (min-width: 1000px) {
+  .my-post-list {
+    width: 65%
+  }
+}
+
 .my-post-list ul {
   padding: 0;
 }
@@ -20,11 +30,12 @@
   min-height: 100px;
   margin: 10px;
   padding: 10px;
+  background: white;
 }
 
 .comment-button {
   color: black;
-  background-color: rgb(113, 145, 182);
+  background-color: inherit;
   font-size: 15px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -48,7 +59,7 @@
 }
 .like-button {
   border: none;
-  background-color: rgb(113, 145, 182);
+  background-color: inherit;
   font-size: 16px;
 }
 .like-button:hover {
@@ -56,7 +67,7 @@
 }
 .dislike-button {
   border: none;
-  background-color: rgb(113, 145, 182);
+  background-color: inherit;
   margin-bottom: -2px;
   font-size: 16px;
 }

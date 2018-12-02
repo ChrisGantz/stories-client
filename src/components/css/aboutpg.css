@@ -3,7 +3,9 @@ body * {
 }
 /* ********Entire background color********* */
 body {
-  background-color: rgb(108, 155, 207);
+  background-image: url('../../books-and-window.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   /* padding: 60px 0 0; solution adds this*/
 }
 .link {
