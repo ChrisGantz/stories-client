@@ -3,7 +3,7 @@ body * {
 }
 /* ********Entire background color********* */
 body {
-  background: url(/static/media/books-and-window.a946e656.jpg) no-repeat center center fixed;
+  background: url(../../books-and-window.jpg) no-repeat center center fixed;
   background-size: cover;
   /* padding: 60px 0 0; solution adds this*/
 }
