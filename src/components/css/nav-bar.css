@@ -5,7 +5,7 @@ nav {
   left: 0;
   right: 0;
   padding: 10px;
-  background-color: grey;
+  background-color: rgb(178, 179, 176);
   width: 100%;
   z-index: 1;
 }
@@ -30,4 +30,14 @@ nav li {
   margin-top: 5px;
   margin-bottom: 5px;
   vertical-align: middle;
+}
+
+.logout-button {
+  font-size: 16px;
+  border: none;
+  background: #b2b3b0;
+}
+
+.logout-button:hover {
+  cursor: pointer;
 }

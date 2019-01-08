@@ -39,3 +39,10 @@
     max-width: 130px;
   }
 }
+
+@media only screen and (min-width: 1000px) {
+  .comments-section {
+    width: 60%;
+    margin: 100px auto;
+  }
+}

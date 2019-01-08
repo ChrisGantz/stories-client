@@ -43,7 +43,7 @@ export class Comments extends React.Component {
       );
     });
     return (
-      <div>
+      <div className="comments-section">
         <Link className="link style-links" to="/posts/all">
           Back
         </Link>
