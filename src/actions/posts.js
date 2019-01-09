@@ -77,7 +77,7 @@ export const userData = () => (dispatch, getState) => {
 // DELETE POST
 export const deletePost = id => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  return fetch(`${API_BASE_URL}/posts/${id}`, {
+  return fetch(`${API_BASE_URL}/posts`, {
     method: 'DELETE',
     headers: {
       "content-type": "application/json",
