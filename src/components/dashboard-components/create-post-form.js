@@ -22,7 +22,7 @@ export class PostForm extends React.Component {
     return (
       <div>
         <form
-          className="comment-form"
+          className="post-form"
           onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
         >
           <legend>Post</legend>

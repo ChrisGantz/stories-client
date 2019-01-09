@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 export function PostList(props) {
   const posts = props.postlist.map(item => (
     <li className="post-item" key={item.id}>
+    <div className="vote-delete-container">
       <div className="vote-container">
         <button className="like-button">
           <span className="fa fa-thumbs-up" />
@@ -13,6 +14,13 @@ export function PostList(props) {
           <span className="fa fa-thumbs-down" />
         </button>
       </div>
+        <div className="delete-post-button">
+          <button className="button-style" onClick={() => {
+            props.getId(item.id)
+            props.askDeletePopUp()
+            }} >DELETE</button>
+      </div>
+    </div>
       <div className="just-post">{item.post}</div>
       {/* <button className="comment-button">
         <Link className="link" to="/comments">
@@ -24,10 +32,7 @@ export function PostList(props) {
   return <div className="my-post-list">{posts}</div>;
 }
 
-// PostList.defaultProps = {
-//   postlist: []
-// };
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state) => {
   return {
     postlist: state.postData.data
   };

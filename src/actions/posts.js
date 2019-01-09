@@ -74,6 +74,22 @@ export const userData = () => (dispatch, getState) => {
     });
 };
 
+// DELETE POST
+export const deletePost = id => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/posts/${id}`, {
+    method: 'DELETE',
+    headers: {
+      "content-type": "application/json",
+      Authorization: `Bearer ${authToken}`
+    },
+    body: JSON.stringify({id})
+  })
+  .then(res => normalizeResponseErrors(res))
+  .then(() => dispatch(userData()))
+  .catch(err => console.log(err))
+}
+
 // Need to create a new reducer for this GET ALL DATA***************
 export const allUsersData = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
