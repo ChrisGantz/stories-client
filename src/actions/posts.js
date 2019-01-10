@@ -76,6 +76,7 @@ export const userData = () => (dispatch, getState) => {
 
 // DELETE POST
 export const deletePost = id => (dispatch, getState) => {
+  console.log('delete post called');
   const authToken = getState().auth.authToken;
   return fetch(`${API_BASE_URL}/posts`, {
     method: 'DELETE',
@@ -85,8 +86,12 @@ export const deletePost = id => (dispatch, getState) => {
     },
     body: JSON.stringify({id})
   })
-  .then(res => normalizeResponseErrors(res))
-  .then(() => dispatch(userData()))
+  .then(res => {
+    console.log('normalizeResponse')
+    return normalizeResponseErrors(res)})
+  .then(() => {
+    console.log('dispatch userData')
+    return dispatch(userData())})
   .catch(err => console.log(err))
 }
 

@@ -29,13 +29,14 @@ export class Dashboard extends React.Component {
   }
 
   getIdFromChild(id) {
-    console.log(id);
+    // console.log(id);
     this.setState({
       postId: id
     })
   }
 
   dispatchDelete() {
+    console.log('dispatchDelete did it dispatch?');
     this.props.dispatch(deletePost(this.state.postId))
   }
   

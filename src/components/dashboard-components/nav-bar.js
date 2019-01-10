@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ideaBulb from "./ideabulb.jpg";
-import yellowPaper from "../../yellow-paper.jpg"
 // import "../css/dashboardcss/navbar.css";
 import LogOut from "../logout";
 
