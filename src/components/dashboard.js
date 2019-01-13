@@ -36,7 +36,6 @@ export class Dashboard extends React.Component {
   }
 
   dispatchDelete() {
-    console.log('dispatchDelete did it dispatch?');
     this.props.dispatch(deletePost(this.state.postId))
   }
   
