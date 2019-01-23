@@ -65,8 +65,10 @@
   padding-left: 10px;
 }
 .post-button {
-  margin-top: 140px;
-  margin-bottom: -80px;
+  display: flex;
+  width: 65%;
+  justify-content: flex-end;
+  margin: 140px auto -80px auto;
 }
 
 .vote-container {
